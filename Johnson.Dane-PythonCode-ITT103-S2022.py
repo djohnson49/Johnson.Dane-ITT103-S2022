@@ -32,6 +32,7 @@ def mainMenu():
     print("========Sales class must be 1, 2, or 3===========")
     print("=================================================\n")
 
+#output menu
 def outputDisplay(sales_id, commission):
     print("=================================================")
     print(" Sales ID  :  " + str(sales_id))
@@ -55,7 +56,7 @@ while sales_id != 1001:#pretest condition
 
         
     #resume data collection   
-    sales = float(input("Enter Sales: "))
+    sales = float(input("Enter Sales: $"))
     sales_class = int(input("Enter Sales Class: "))
     
     #determine sales class entered
@@ -86,7 +87,8 @@ while sales_id != 1001:#pretest condition
 
     #calculate commission based on determined rate
     commission = sales * crate
-
+    
+    
     #display commission
-    outputDisplay(sales_id, commission)
+    outputDisplay(sales_id, round(commission, 2))
     os.system("pause")
